@@ -1,0 +1,5 @@
+<apex:page controller="C501_REST_Auth_Controller" action="{!GetAccessCode}" showHeader="false" standardStylesheets="false">
+    
+    <apex:outputLabel id="strAccessToken" Value="{!strAccessToken}"/>
+    
+</apex:page>

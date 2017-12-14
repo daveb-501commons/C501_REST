@@ -1,0 +1,11 @@
+{
+  "orgName": "C501_REST - Release Test Org",
+  "edition": "Enterprise",
+  "orgPreferences" : {
+    "enabled": [
+      "S1DesktopEnabled",
+      "Translation",
+      "ChatterEnabled" 
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C501_REST</fullName>
+    <types>
+        <members>C501_REST</members>
+        <members>C501_REST_Auth_Controller</members>
+        <members>C501_SharedCode</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>C501_REST_Auth</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>C501_REST_Settings__c.client_id__c</members>
+        <members>C501_REST_Settings__c.client_secret__c</members>
+        <members>C501_REST_Settings__c.code__c</members>
+        <members>C501_REST_Settings__c.refresh_token__c</members>
+        <members>C501_REST_Settings__c.valid_client_addresses__c</members>
+        <members>CampaignMember.C501_REST_Message__c</members>
+        <members>CampaignMember.C501_REST_Newsletter__c</members>
+        <members>Contact.C501_REST_Managed__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>C501_REST_Settings__c</members>
+        <name>CustomObject</name>
+    </types>
+    <version>41.0</version>
+</Package>

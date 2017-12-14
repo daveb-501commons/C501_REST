@@ -1,0 +1,11 @@
+{
+  "orgName": "C501_REST - Beta Test Org",
+  "edition": "Developer",
+  "orgPreferences" : {
+    "enabled": [
+      "S1DesktopEnabled",
+      "Translation",
+      "ChatterEnabled" 
+    ]
+  }
+}
