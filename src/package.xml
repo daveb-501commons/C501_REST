@@ -3,13 +3,9 @@
     <fullName>C501_REST</fullName>
     <types>
         <members>C501_REST</members>
-        <members>C501_REST_Auth_Controller</members>
+        <members>C501_REST_Auth</members>
         <members>C501_SharedCode</members>
         <name>ApexClass</name>
-    </types>
-    <types>
-        <members>C501_REST_Auth</members>
-        <name>ApexPage</name>
     </types>
     <types>
         <members>C501_REST_Settings__c.client_id__c</members>

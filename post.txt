@@ -1,8 +1,0 @@
-{
-  "campaignid" : "701c0000000XzpH"
-  ,"source" : "debugging"
-  ,"email" : "daveb@501commons.org"
-  ,"name" : "dave"
-  ,"newsletter" : "true"
-  ,"message" : "my messageII"
-}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>load demo</title>
+  <style>
+    body {
+      font-size: 12px;
+      font-family: Arial;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  <button onclick="requestToken()">Request Token</button><br/>
+  <br/>
+
+  <button onclick="submit()">Submit</button><br/>
+  <br/>
+
+  <b>Token Response:</b>
+  <p id="token-response"></p>
+  <b>Submit Response:</b>
+  <p id="submit-response"></p>
+
+  <script>
+    var TOKEN_PATH = "https://bspwebsync-bff-sandboxbspwebsync.cs14.force.com/services/apexrest/C501_REST_Auth"
+    var SUBMIT_PATH = "https://bspwebsync-bff-sandboxbspwebsync.cs14.force.com/services/apexrest/C501_REST/"
+
+    function requestToken() {
+      console.log('sending request to SF for token')
+      $.ajax({
+        type: 'GET',
+        url: TOKEN_PATH,
+        crossDomain: true,
+        success: function(responseData, textStatus, jqXHR) {
+          window.token = responseData
+          $('#token-response').text(window.token)
+        },
+        error: function (responseData, textStatus, err) {
+          console.error(responseData, textStatus, err)
+          $('#token-response').text("Error: Check console for error messages")
+        }
+      })
+    }
+
+    function submit() {
+      const testData = {
+        "campaignid": "701c0000000XzpH",
+        "source": "TEST_SOURCE",
+        "email": "ryans@fuzzco.com",
+        "newsletter" : true,
+      }
+
+
+
+      $.ajax({
+        type: 'POST',
+        url: SUBMIT_PATH,
+        crossDomain: true,
+        contentType: "application/json; charset=UTF-8",
+        headers: {
+          "Authorization": "Bearer " + window.token
+        },
+        dataType: 'json',
+        data: JSON.stringify(testData),
+        success: function(responseData, textStatus, jqXHR) {
+          console.log('success', responseData)
+          $('#submit-response').html('<b>Success</b><br/><pre>'+JSON.stringify(responseData,null,2)+'</pre>')
+        },
+        error: function (responseData, textStatus, err) {
+          console.error(responseData, textStatus, err)
+          $('#submit-response').text("Error: Check console for error messages")
+        }
+      })
+    }
+
+  </script>
+
+</body>
+
+</html>
